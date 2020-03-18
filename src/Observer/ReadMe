@@ -1,0 +1,2 @@
+Observer pattern is used when there is one to many relationships between objects such as if one object is modified,
+its dependant objects are to be notified automatically. Observer pattern falls under behavioral pattern category.
