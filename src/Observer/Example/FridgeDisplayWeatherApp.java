@@ -1,6 +1,7 @@
 package Observer.Example;
 
 public class FridgeDisplayWeatherApp implements IObserver{
+
     private WeatherStation weatherStation;
 
     public FridgeDisplayWeatherApp(WeatherStation weatherStation) {

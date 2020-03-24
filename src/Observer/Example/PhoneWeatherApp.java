@@ -14,4 +14,6 @@ public class PhoneWeatherApp implements IObserver {
     public void update() {
         System.out.println(this + ": The current temperature now is " + weatherStation.getTemp().toString() + " degree!");
     }
+
+
 }
