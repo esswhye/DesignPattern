@@ -15,7 +15,7 @@ public class Main {
 
         Beverage espressoBeverage = new EspressoBeverage();
 
-        Beverage defSoyCaramel = new Caramel(new Soy(decafBeverage));
+        Beverage defSoyCaramel = new Caramel(decafBeverage);
 
 
         defSoyCaramel.getInfo();
