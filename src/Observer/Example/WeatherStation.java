@@ -21,7 +21,7 @@ public class WeatherStation implements IObservable{
 
     @Override
     public void notifyObserver() {
-        observers.forEach(observer -> observer.update());
+        observers.forEach(IObserver::update);
     }
 
     public Double getTemp() {
