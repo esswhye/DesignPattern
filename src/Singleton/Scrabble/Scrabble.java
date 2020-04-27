@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 
 public class Scrabble {
+
     private static Scrabble firstInstance = null;
 
     private String[] scrabbleLetters = {"a", "a", "a", "a", "a", "a", "a", "a", "a",
@@ -26,24 +27,21 @@ public class Scrabble {
     private Scrabble() {
     }
 
-    public static Scrabble getInstance(){
-        if(firstInstance == null)
-        {
-            if(firstThread)
-            {
+    public static Scrabble getInstance() {
+        if (firstInstance == null) {
+            if (firstThread) {
                 firstThread = false;
 
-                try{
-                    System.out.println(Thread.currentThread().getName()+ " Accessed getInstance first");
+                try {
+                    System.out.println(Thread.currentThread().getName() + " Accessed getInstance first");
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
 
-            synchronized (Scrabble.class)
-            {
-                if(firstInstance == null){
+            synchronized (Scrabble.class) {
+                if (firstInstance == null) {
 
                     //If the instance isn't needed it isnt created
                     //This is known as lazy instantiation
@@ -60,17 +58,14 @@ public class Scrabble {
         return firstInstance.letterList;
     }
 
-    public int getTotalLength()
-    {
+    public int getTotalLength() {
         return firstInstance.letterList.size();
     }
 
-    public LinkedList<String> getTiles(int howManyTiles)
-    {
+    public LinkedList<String> getTiles(int howManyTiles) {
         LinkedList<String> tilesToSend = new LinkedList<>();
 
-        for(int i = 0; i<= howManyTiles; i++)
-        {
+        for (int i = 0; i <= howManyTiles; i++) {
             tilesToSend.add(firstInstance.letterList.remove(0));
         }
 

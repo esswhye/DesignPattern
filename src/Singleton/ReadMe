@@ -1,0 +1,19 @@
+This pattern involves a single class which is responsible for creating an object while making sure that only ONE object is gets created.
+
+Singletons solve one (and only one) problem.
+
+Resource Contention.
+
+If you have some resource that
+
+(1) can only have a single instance, and
+
+(2) you need to manage that single instance,
+
+you need a singleton.
+
+There aren't many examples. A log file is the big one. You don't want to just abandon a single log file. You want to flush, sync and close it properly. This is an example of a single shared resource that has to be managed.
+
+It's rare that you need a singleton. The reason they're bad is that they feel like a global and they're a fully paid up member of the GoF Design Patterns book.
+
+When you think you need a global, you're probably making a terrible design mistake.
