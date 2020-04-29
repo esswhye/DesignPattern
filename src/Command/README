@@ -1,0 +1,9 @@
+http://javabypatel.blogspot.com/2016/07/command-design-pattern-in-java.html
+
+Command Design pattern is used to decouple Sender and Receiver.
+Sender is totally unaware of Receiver's interface and Receiver is unaware of Sender.
+Sender and Receiver communicates using command.
+
+Resturant is a classic example of Command Pattern.
+Customer(Invoker) is not aware of Chef(Receiver) and they communicate via Waiter(Command Manager) by giving Menu Name(Commands) to them.
+Customer doesn't need to know how to communicate directly with Chef.
