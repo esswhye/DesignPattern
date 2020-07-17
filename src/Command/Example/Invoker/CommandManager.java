@@ -8,13 +8,17 @@ public class CommandManager {
 
     private Stack<Command> commandStack;
 
+    public void init() {
+        System.out.println("test");
+    }
+
     public CommandManager() {
         this.commandStack = new Stack<>();
     }
 
     public void setCommand(Command command) {
         commandStack.push(command);
-       // System.out.println(command.getClass().getSimpleName() + " added to stack");
+        // System.out.println(command.getClass().getSimpleName() + " added to stack");
     }
 
     public void execute() {

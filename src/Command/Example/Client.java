@@ -15,7 +15,7 @@ public class Client {
 
         Receiver notepad = new Notepad("This is a notepad. ");
         CommandManager commandManager = new CommandManager();
-
+        commandManager.init();
         Command copyCommand = new CopyCommand(notepad, "Hello ");
         commandManager.setCommand(copyCommand);
         commandManager.execute();
