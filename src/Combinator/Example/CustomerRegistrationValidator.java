@@ -6,6 +6,9 @@ import java.util.function.Function;
 
 public interface CustomerRegistrationValidator extends Function<Customer, String> {
 
+
+    //https://gtrefs.github.io/code/combinator-pattern/
+
     static CustomerRegistrationValidator isNumberValid() {
         return customer -> {
             System.out.println("isNumberValid");
